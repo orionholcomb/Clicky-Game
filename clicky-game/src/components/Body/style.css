@@ -1,0 +1,12 @@
+.bodydiv {
+    margin: 100px auto;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    background-image: url("https://cdn.pixabay.com/photo/2014/04/03/10/32/scroll-310783__340.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 90%;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+};

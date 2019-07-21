@@ -1,9 +1,11 @@
 // resources & components
-import React, {Component} from "React";
+import React, {Component} from "react";
 import data from "../../data.json";
+import Body from "../Body/index.js";
+import "./style.css";
 
-// setting the base scores when the user starts up the game
-class gameScore extends Component {
+// setting the base scores when the user starts up the game and naming the component
+class Game extends Component {
     state = {
         data,
         score: 0,
@@ -50,14 +52,16 @@ class gameScore extends Component {
 
     // if the user chooses an image that has already been selected, this will reset the base score and scramble the images
     incorrectChoice = function (data) {
-            data = this.restart(data),
-            score = 0;
+        this.setState({
+            data: this.restart(data),
+            score: 0
+        });
     };
     
     // Function that resets all the data in its original position, will be used every single time the user chooses a photo
     restart = function (data) {
-        const resetData = data.map(function (character) {({ character, selected: false})});
-        return this.scrambleClasses(restart);
+        const resetData = data.map(character => ({ character, selected: false}));
+        return this.scrambleClasses(resetData);
     };
 
     // function that will be activated when the user clicks an image 
@@ -79,11 +83,32 @@ class gameScore extends Component {
         // if the returned value is true, the correctChoice function will run. If it is false, the incorrectChoice function will run.
         
             if (correct === true) {
-                this.correctChoice(newChoice)
+                this.correctChoice(newData)
             }
             else {
-                this.incorrectChoice(newChoice)
+                this.incorrectChoice(newData)
             };
     };
-
+    
+    // organizes all of the frontend components and extra functions in one place
+    render() {
+    return (
+        <Body>
+        <div>
+            {/* {this.state.data.map(character => (
+                <UserClick 
+                key={character.id} 
+                id={character.id}
+                shake={!this.state.score}
+            ))}  */}
+        </div>
+        </Body>
+    );
 }
+
+};
+
+
+
+
+export default Game;

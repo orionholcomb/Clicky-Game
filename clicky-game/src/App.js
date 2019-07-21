@@ -1,15 +1,11 @@
+// linking app to the Game component
+// navigate to /components/Game/index.js to view all functions and components
 import React from 'react';
-import logo from './logo.svg';
+import Game from "./components/Game";
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Nothing to see here yet!</h1>
-      </header>
-    </div>
-  );
+  return <Game />;
 }
 
 export default App;
