@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "image": "/assets/images/deathknight.jpg",
+        "selected": false
+    },
+    {
+        "id": 2,
+        "image": "/assets/images/demonhunter.jpg",
+        "selected": false
+    },{
+        "id": 3,
+        "image": "/assets/images/druid.jpg",
+        "selected": false
+    },{
+        "id": 4,
+        "image": "/assets/images/hunter.jpg",
+        "selected": false
+    },{
+        "id": 5,
+        "image": "/assets/images/mage.jpg",
+        "selected": false
+    },{
+        "id": 6,
+        "image": "/assets/images/monk.jpg",
+        "selected": false
+    },{
+        "id": 7,
+        "image": "/assets/images/paladin.jpg",
+        "selected": false
+    },{
+        "id": 8,
+        "image": "/assets/images/priest.jpg",
+        "selected": false
+    },{
+        "id": 9,
+        "image": "/assets/images/rogue.jpg",
+        "selected": false
+    },{
+        "id": 10,
+        "image": "/assets/images/shaman.jpg",
+        "selected": false
+    },{
+        "id": 11,
+        "image": "/assets/images/warlock.jpg",
+        "selected": false
+    },{
+        "id": 12,
+        "image": "/assets/images/warrior.jpg",
+        "selected": false
+    },
+]
