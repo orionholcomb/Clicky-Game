@@ -1,3 +1,4 @@
+// resources & components
 import React, {Component} from "React";
 import data from "../../data.json";
 
@@ -36,7 +37,7 @@ class gameScore extends Component {
         const addScore = score + 1;
         const newhigh = Math.max(addScore, highscore);
         
-
+        // scrambles all the images when the user makes a correct choice
         this.setState({
             data: this.scrambleClasses(choice),
             score: addScore,
@@ -47,9 +48,9 @@ class gameScore extends Component {
         console.log(highscore);
     };
 
-    // COME BACK TO THIS !!!!!!!
+    // if the user chooses an image that has already been selected, this will reset the base score and scramble the images
     incorrectChoice = function (data) {
-            data = this.resetData(data),
+            data = this.restart(data),
             score = 0;
     };
     
@@ -59,6 +60,8 @@ class gameScore extends Component {
         return this.scrambleClasses(restart);
     };
 
+    // function that will be activated when the user clicks an image 
+    //Determines if the image has been selected and if not it will mark as selected then return the value
     userChoice = function (id) {
         let correct = false;
         const newData = this.state.data.map( function (choice) {
@@ -72,6 +75,8 @@ class gameScore extends Component {
             }
             return newChoice;
         });
+
+        // if the returned value is true, the correctChoice function will run. If it is false, the incorrectChoice function will run.
         
             if (correct === true) {
                 this.correctChoice(newChoice)
