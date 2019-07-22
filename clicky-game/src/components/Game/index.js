@@ -1,7 +1,10 @@
 // resources & components
 import React, {Component} from "react";
-import data from "../../data.json";
+import Navbar from "../Navbar/index.js";
+import IntroCard from "../IntroCard/index.js";
 import Body from "../Body/index.js";
+import UserClick from "../UserClick/index.js";
+import data from "../../data.json";
 import "./style.css";
 
 // setting the base scores when the user starts up the game and naming the component
@@ -68,7 +71,7 @@ class Game extends Component {
     //Determines if the image has been selected and if not it will mark as selected then return the value
     userChoice = function (id) {
         let correct = false;
-        const newData = this.state.data.map( function (choice) {
+        const newData = data.map(function (choice) {
             const newChoice = { choice };
 
             if (newChoice.id === id) {
@@ -93,16 +96,20 @@ class Game extends Component {
     // organizes all of the frontend components and extra functions in one place
     render() {
     return (
-        <Body>
         <div>
-            {/* {this.state.data.map(character => (
+        <IntroCard/>
+        <Navbar score={this.state.score} highscore={this.state.highscore} />
+        <Body>
+            {this.state.data.map(character => (
                 <UserClick 
                 key={character.id} 
                 id={character.id}
-                shake={!this.state.score}
-            ))}  */}
-        </div>
-        </Body>
+                userChoose={this.userChoice}
+                image={character.image}
+                />
+            ))} 
+         </Body>
+       </div>
     );
 }
 

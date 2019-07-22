@@ -1,0 +1,17 @@
+.userClick {
+    background-position: center;
+    background-size: cover;
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+.userClick:hover {
+    background-position: center;
+    background-size: cover;
+    border: 5px solid rgb(10, 207, 10);
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}

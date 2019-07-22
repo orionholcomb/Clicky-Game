@@ -1,0 +1,11 @@
+.introcard {
+    background-image: url("http://behavioralstrides.com/wp-content/uploads/2018/08/586c3-title-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20%;
+}
+
+.title {
+    text-align: center;
+    font-family: "Goudy Old Style"
+}
