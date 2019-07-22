@@ -6,7 +6,7 @@ function Navbar(props) {
     return (
         <nav classname="nav">
             <ScoreKeep score={props.score} highscore={props.highscore} />
-            <li>
+            <li className="scores">
                 Score: {props.score} | Highest Score: {props.highscore}
             </li>
         </nav>

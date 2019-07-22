@@ -1,0 +1,9 @@
+.scores {
+    background-color: rgb(180, 152, 75);
+    border: 5px solid black;
+    border-radius: 30%;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    width: 80%;
+}

@@ -38,7 +38,7 @@ class ScoreKeep extends Component {
   // renders the final verdict of the user's choice
   render() {
     return (
-      <li>
+      <li className="smallmsg">
         {this.renderMessage()}
       </li>
     );

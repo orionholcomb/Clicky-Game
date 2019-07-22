@@ -1,7 +1,13 @@
+.row {
+    display: flex;
+    max-height: 3000px;
+}
+
 .userClick {
     background-position: center;
     background-size: cover;
     border: 5px solid black;
+    margin: auto;
     border-radius: 5px;
     width: 200px;
     height: 200px;
@@ -10,7 +16,7 @@
 .userClick:hover {
     background-position: center;
     background-size: cover;
-    border: 5px solid rgb(10, 207, 10);
+    border: 5px solid rgb(8, 138, 8);
     border-radius: 10px;
     width: 200px;
     height: 200px;
